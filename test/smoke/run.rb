@@ -21,6 +21,9 @@ end
 def check_fail(out, f)
   abort "#{f}: fail because red text is not rendered:\n#{out}" unless out.include? "#{RED}--- FAIL: "
 end
+def check_result(out, f, text)
+  abort "#{f}: fail because result is not rendered:\n#{out}" unless out.include? "#{BOLD}#{text}#{RESET}"
+end
 
 f = 'pass_test.go'
 out = `./gotest ./test/smoke/#{f}`
@@ -29,6 +32,7 @@ abort "#{f}: fail due to non-zero exit status: #{$?}" unless $?.success?
 check_run(out, f)
 check_skip(out, f)
 check_pass(out, f)
+check_result(out, f, "#{GREEN}PASS")
 
 f = 'fail_test.go'
 out = `./gotest ./test/smoke/#{f}`
@@ -37,5 +41,7 @@ check_run(out, f)
 check_skip(out, f)
 check_pass(out, f)
 check_fail(out, f)
+
+check_result(out, f, "#{RED}FAIL")
 
 puts 'OK'
