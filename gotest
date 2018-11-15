@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# gotest
+#
+# the MIT License
+#
+# Copyright (c) 2018 rhysd
+
+# Usage:
+#  Put this file in $PATH directory and give it an executable permission.
+#  Arguments are the same as `go test` but -v is implied.
+
+GREEN='[92m'
+RED='[91m'
+YELLOW='[93m'
+GRAY='[90m'
+BOLD='[1m'
+RESET='[0m'
+
+pass="s/^[[:space:]]*--- PASS: /${GREEN}&${RESET}/;"
+fail="s/^[[:space:]]*--- FAIL: /${RED}&${RESET}/;"
+skip="s/^[[:space:]]*--- SKIP: /${YELLOW}&${RESET}/;"
+result_pass="s/^PASS$/${GREEN}&${RESET}/;"
+result_fail="s/^FAIL$/${RED}&${RESET}/;"
+run="s/^=== RUN /${BOLD}&${RESET}/;"
+elapsed="s/\\([[:digit:]]+\\.[[:digit:]]+s\\)/${GRAY}&${RESET}/;"
+
+go test -v ${1+"$@"} | sed -E "$pass $fail $skip $result_pass $result_fail $run $elapsed"
+exit "${PIPESTATUS[0]}"
