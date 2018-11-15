@@ -19,6 +19,10 @@ $ gotest [args...]
 
 Arguments are the same as `go test` but `-v` is always implied.
 
+The reason I created this thought [gotest](https://github.com/rakyll/gotest) already exists is that
+my requirements can be met with only ~20 lines of shell script. Smaller script is better because
+it can be modified/fixed easily and easy to understand and easy to test.
+
 ## License
 
 [MIT License](LICENSE.txt)
