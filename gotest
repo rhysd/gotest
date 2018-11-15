@@ -17,9 +17,9 @@ GRAY='[90m'
 BOLD='[1m'
 RESET='[0m'
 
-pass="s/^[[:space:]]*--- PASS: /${GREEN}&${RESET}/;"
-fail="s/^[[:space:]]*--- FAIL: /${RED}&${RESET}/;"
-skip="s/^[[:space:]]*--- SKIP: /${YELLOW}&${RESET}/;"
+pass="s/^[[:space:]]*--- PASS: .+$/${GREEN}&${RESET}/;"
+fail="s/^[[:space:]]*--- FAIL: .+$/${RED}&${RESET}/;"
+skip="s/^[[:space:]]*--- SKIP: .+$/${YELLOW}&${RESET}/;"
 result_pass="s/^PASS$/${GREEN}&${RESET}/;"
 result_fail="s/^FAIL$/${RED}&${RESET}/;"
 run="s/^=== RUN /${BOLD}&${RESET}/;"

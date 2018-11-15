@@ -10,16 +10,16 @@ RESET='[0m'
 abort 'This script must be run from root of repository' unless Dir.exist? '.git'
 
 def check_run(out, f)
-  abort "#{f}: fail because bold text is not rendered:\n#{out}" unless out.include? "#{BOLD}=== RUN #{RESET}"
+  abort "#{f}: fail because bold text is not rendered:\n#{out}" unless out.include? "#{BOLD}=== RUN "
 end
 def check_skip(out, f)
-  abort "#{f}: fail because yellow text is not rendered:\n#{out}" unless out.include? "#{YELLOW}--- SKIP: #{RESET}"
+  abort "#{f}: fail because yellow text is not rendered:\n#{out}" unless out.include? "#{YELLOW}--- SKIP: "
 end
 def check_pass(out, f)
-  abort "#{f}: fail because green text is not rendered:\n#{out}" unless out.include? "#{GREEN}--- PASS: #{RESET}"
+  abort "#{f}: fail because green text is not rendered:\n#{out}" unless out.include? "#{GREEN}--- PASS: "
 end
 def check_fail(out, f)
-  abort "#{f}: fail because red text is not rendered:\n#{out}" unless out.include? "#{RED}--- FAIL: #{RESET}"
+  abort "#{f}: fail because red text is not rendered:\n#{out}" unless out.include? "#{RED}--- FAIL: "
 end
 
 f = 'pass_test.go'
