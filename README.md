@@ -1,5 +1,6 @@
 Tiny SED Script to Colorize `go test`
 =====================================
+[![Linux/macOS Test Status][travisci-badge]][travisci]
 
 This repository provides tiny `sed` script to colorize `go test`.
 
@@ -22,3 +23,5 @@ Arguments are the same as `go test` but `-v` is always implied.
 
 [MIT License](LICENSE.txt)
 
+[travisci-badge]: https://travis-ci.org/rhysd/gotest.svg?branch=master
+[travisci]: https://travis-ci.org/rhysd/gotest
