@@ -11,6 +11,13 @@ This repository provides tiny `sed` script to colorize `go test`.
 1. Copy [`gotest`](gotest) script to your `$PATH` directory
 2. Give it an executable permission with `chmod +x`
 
+On CI, directly downloading `gotest` with `curl` would be sufficient in most cases as follows.
+
+```sh
+$ curl -L https://raw.githubusercontent.com/rhysd/gotest/master/gotest > gotest
+$ bash ./gotest
+```
+
 ## Usage
 
 ```
