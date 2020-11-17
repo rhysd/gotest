@@ -1,6 +1,0 @@
-language: go
-os:
-    - linux
-    - osx
-script:
-    - ruby ./test/smoke/run.rb

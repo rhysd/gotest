@@ -1,6 +1,6 @@
 Tiny SED Script to Colorize `go test`
 =====================================
-[![Linux/macOS Test Status][travisci-badge]][travisci]
+[![CI][ci-badge]][ci]
 
 This repository provides a tiny script to colorize `go test`.
 
@@ -45,6 +45,6 @@ Please modify them to use your favorite colors.
 
 [MIT License](LICENSE.txt)
 
-[travisci-badge]: https://travis-ci.org/rhysd/gotest.svg?branch=master
-[travisci]: https://travis-ci.org/rhysd/gotest
+[ci-badge]: https://github.com/rhysd/gotest/workflows/CI/badge.svg?branch=master&event=push
+[ci]: https://github.com/rhysd/gotest/actions?query=workflow%3ACI
 [ansi-colors]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
