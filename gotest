@@ -7,7 +7,7 @@
 # Copyright (c) 2018 rhysd
 
 # Usage:
-#  Put this file in $PATH directory and give it an executable permission.
+#  Put this file in $PATH directory and give it executable permission by `chmod +x`
 #  Arguments are the same as `go test` but -v is implied.
 
 GREEN='[92m'

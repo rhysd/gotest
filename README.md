@@ -35,9 +35,16 @@ The reason I created this thought [gotest](https://github.com/rakyll/gotest) alr
 my requirements can be met with only ~20 lines of shell script. Smaller script is better because
 it can be modified/fixed easily and easy to understand and easy to test.
 
+## Change colors
+
+If you want to change colors, please modify [the script](gotest) directly. The color definitions at
+top of the script (e.g. `92` for green, `91` for red) are [ANSI escape sequences for colors][ansi-colors].
+Please modify them to use your favorite colors.
+
 ## License
 
 [MIT License](LICENSE.txt)
 
 [travisci-badge]: https://travis-ci.org/rhysd/gotest.svg?branch=master
 [travisci]: https://travis-ci.org/rhysd/gotest
+[ansi-colors]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
