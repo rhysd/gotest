@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  tests:
+    name: Tests
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-ruby@v1
+      - uses: actions/setup-go@v2
+      - uses: actions/checkout@v2
+      - run: ruby ./test/smoke/run.rb
