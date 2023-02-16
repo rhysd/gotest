@@ -10,7 +10,9 @@ jobs:
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/setup-ruby@v1
-      - uses: actions/setup-go@v2
-      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+      - uses: actions/setup-go@v3
+      - uses: actions/checkout@v3
       - run: ruby ./test/smoke/run.rb
