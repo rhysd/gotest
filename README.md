@@ -45,6 +45,6 @@ Please modify them to use your favorite colors.
 
 [MIT License](LICENSE.txt)
 
-[ci-badge]: https://github.com/rhysd/gotest/workflows/CI/badge.svg?branch=master&event=push
-[ci]: https://github.com/rhysd/gotest/actions?query=workflow%3ACI
+[ci-badge]: https://github.com/rhysd/gotest/actions/workflows/ci.yaml/badge.svg
+[ci]: https://github.com/rhysd/gotest/actions/workflows/ci.yaml
 [ansi-colors]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
